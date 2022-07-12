@@ -5,26 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Projeto JSP</title>
 </head>
 <body>
-<%
-//<jsp:forward page="recebe-dados-login.jsp">
-//<jsp:param value="Spider" name="username"/>
-//</jsp:forward>
-%>
-<jsp:include page="cabecalho.jsp"/>
+<h1>Login</h1>
 
-<form action="recebe-dados-login.jsp" method="post">
-  <label >UserName:</label><br>
-  <input type="text" id="username" name="username"  required><br>
-  <label >Email:</label><br>
-  <input type="email" id="email" name="email" required><br>
+
+<form action="LoginServlet" method="post">
+  <label >Login:</label><br>
+  <input type="text" id="login" name="login"  required><br>  
   <label >Senha:</label><br>
   <input type="password" id="senha" name="senha" minlength="8" required><br><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Logar">
 </form> 
-<jsp:include page="rodape.jsp"/>
 
 </body>
 </html>

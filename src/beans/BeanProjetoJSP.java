@@ -1,41 +1,34 @@
 package beans;
 
-import java.util.Random;
-
 public class BeanProjetoJSP {
 	
-	private String username;
-	private String email;
+	private String login;
+	private String senha;
+	
+	public String getLogin() {
+		return login;
+	}
+	public void setLogin(String login) {
+		this.login = login;
+	}
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	
+	public boolean validarLoginSenha(String login,String senha) {
+		if(login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin123")) {
+			
+			return true;
+						
+		}
+		return false;		
+	}
 	
 	
 	
-	public String getUsername() {
-		return username;
-	}
-
-
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-
-
-	public String getEmail() {
-		return email;
-	}
-
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-
-
-	public int numeroDaSorte(){
-		
-		return new Random().nextInt(1000);
-	}
+	
 
 }
